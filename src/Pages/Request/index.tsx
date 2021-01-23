@@ -1,10 +1,12 @@
 import React from 'react';
+import CustomButton from '../../Components/CustomButton';
 import PageLayout from '../../Components/PageLayout';
+import { CaretDownIconWithBg } from '../../assets/svg'
 
 function Request() {
     return (
         <PageLayout>
-            <h1>Request</h1>
+            <CustomButton text="CREATE INVOICE" clear={true} fill={false} />
         </PageLayout>
     )
 }
