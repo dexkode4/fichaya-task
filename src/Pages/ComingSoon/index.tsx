@@ -1,12 +1,10 @@
 import React from 'react';
 import PageLayout from '../../Components/PageLayout';
-import { Icomingsoon } from '../../interface';
 
-function ComingSoon({ match }: Icomingsoon) {
+function ComingSoon() {
     return (
         <PageLayout>
-            <span>Coming soon</span>
-            <h1>{match.url}</h1>
+            <h1>Coming soon</h1>
         </PageLayout>
     )
 }

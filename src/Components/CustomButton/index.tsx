@@ -9,7 +9,7 @@ function CustomButton({ text, icon, clear, fill, toggleOptions }: Icustombutton)
 
     return (
         <>
-            <button className={cx(styles.customBtn, icon && styles.customBtnAction, clear && styles.customBtnClear, fill && styles.customBtnFill)} onClick={() =>  toggleOptions((prev: boolean) => !prev)}>
+            <button className={cx(styles.customBtn, icon && styles.customBtnAction, clear && styles.customBtnClear, fill && styles.customBtnFill)} onClick={() => toggleOptions && toggleOptions((prev: boolean) => !prev)}>
                 <span>{text}</span>
                 {icon}
             </button>

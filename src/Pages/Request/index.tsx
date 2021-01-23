@@ -10,20 +10,20 @@ import { InvoiceStatus, Options } from './Request.component';
 
 const options = [
     {
-        link: '/',
+        link: 'contact-customer',
         title: 'Contact customer'
     },
     {
-        link: '/',
+        link: 'generate-invoice',
         title: 'Generate invoice'
     },
     {
-        link: '/',
+        link: 'reject-request',
         title: 'Reject request'
     }
 ]
 
-function Request() {
+function Request({ match }: { match: { url: string } }) {
     const [isOpen, setIsOpen] = useState(false);
     console.log(isOpen);
     return (
@@ -79,7 +79,7 @@ IWAYA, ONIKE, YABA.</span>
                 <div className={styles.action}>
                     <CustomButton text="Actions" icon={<CaretDownIconWithBg />} clear={false} fill={false} toggleOptions={setIsOpen} />
                     {
-                        isOpen && <Options options={options} isOpen={isOpen} setIsOpen={setIsOpen} />
+                        isOpen && <Options options={options} isOpen={isOpen} setIsOpen={setIsOpen} match={match}/>
                     }
                 </div>
 

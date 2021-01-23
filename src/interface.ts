@@ -23,11 +23,19 @@ export interface IinvoiceStatus {
 
 export interface Ioptions {
     options: Ioption[],
-    isOpen : boolean,
-    setIsOpen : (D: boolean) => void
+    isOpen: boolean,
+    setIsOpen: (D: boolean) => void,
+    match: { url: string }
 }
 
 export interface Ioption {
     link: string,
     title: string
+}
+
+export interface Iformdata {
+    company: string,
+    email: string,
+    phone: string,
+    address: string
 }

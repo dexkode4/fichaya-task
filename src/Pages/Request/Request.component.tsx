@@ -11,7 +11,7 @@ export function InvoiceStatus({ status }: IinvoiceStatus) {
     )
 }
 
-export function Options({ options, isOpen, setIsOpen }: Ioptions) {
+export function Options({ options, isOpen, setIsOpen, match}: Ioptions) {
     const dropDownRef = useRef<HTMLDivElement>(null);
     // useEffect(() => {
     //     function handleClickOutside(event: any) {
@@ -30,7 +30,7 @@ export function Options({ options, isOpen, setIsOpen }: Ioptions) {
         <div className={styles.options} ref={dropDownRef}>
             {
                 options.map((option: Ioption, index) => (
-                    <Link to={option.link} key={index}>
+                    <Link to={`${match.url}/${option.link}`} key={index}>
                         {option.title}
                     </Link>
                 ))

@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+.header {
+    margin-top: 2rem;
+}
+
+.formSection{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    &Left, &Right{
+        background-color: $color-bg-white;
+        border: 1px solid $color-grey;
+        border-radius: 10px;
+        padding: 2.5rem 2rem;
+        width: 49%;
+
+        & div {
+            margin-bottom: 1rem;
+        }
+
+        & .mid{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            & div {
+                width: 48%;
+                
+            }
+        }
+    }
+}
+
+.inputField {
+    display: block;
+    border: 1px solid $color-gold;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 100;
+    margin-top: 1rem;
+    outline-width: 0;
+    padding: .6rem 1rem;
+    width: 100%;
+}
