@@ -13,20 +13,20 @@ export function InvoiceStatus({ status }: IinvoiceStatus) {
 
 export function Options({ options, isOpen, setIsOpen, match}: Ioptions) {
     const dropDownRef = useRef<HTMLDivElement>(null);
-    // useEffect(() => {
-    //     function handleClickOutside(event: any) {
-    //         if (dropDownRef.current && !dropDownRef.current.contains(event.target)) {
-    //             setIsOpen(false);
-    //         }
-    //     }
-    //     document.addEventListener('mousedown', handleClickOutside);
-    //     return () => {
-    //         document.removeEventListener('mousedown', handleClickOutside);
-    //     };
-    // }, [dropDownRef, setIsOpen]);
+    useEffect(() => {
+        function handleClickOutside(event: any) {
+            if (dropDownRef.current && !dropDownRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        }
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [dropDownRef, setIsOpen]);
 
     return <> {
-        // isOpen &&
+        isOpen &&
         <div className={styles.options} ref={dropDownRef}>
             {
                 options.map((option: Ioption, index) => (

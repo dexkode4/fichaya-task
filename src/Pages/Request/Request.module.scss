@@ -68,7 +68,7 @@
      & .options {
          position: absolute;
          background: $color-bg-white;
-         top: -7.5rem;
+         top: -8.2rem;
          right: 0;
          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
          border-radius: 5px;
@@ -86,8 +86,10 @@
              right: 5%;
          }
          & > * {
+             font-size: 1.1rem;
+             font-weight: 300;
              display: block;
-             padding: .7rem 1rem;
+             padding: .8rem 1rem;
              width: 100%;
 
              &:hover{
