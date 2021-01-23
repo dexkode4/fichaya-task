@@ -1,0 +1,107 @@
+@import '../../styles/variables';
+
+.info_card{
+    background: $color-bg-white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $color-grey;
+    padding: 1.5rem 2.5rem;
+    position: relative;
+    margin-top: 2rem;
+    width: 55%;
+
+    & > *:last-child {
+        align-self: flex-end;
+    }
+    & > *:not(:last-child) {
+        display: flex;
+        width: 100%;
+    }
+
+    & > *:not(:last-child){
+        margin-bottom: 2rem;
+    }
+    
+    &Top, &Middle, &Bottom{
+        & > *:first-child {
+            width: 34%;
+        }
+
+        & > *:nth-child(2){
+            width: 35%;
+        }
+
+        & div header {
+            margin-bottom: .5rem;
+            text-transform: uppercase;
+        }
+
+        & div span {
+            color: $color-dark-blue;
+            font-size: 1.3rem;
+            font-weight: 400;
+           
+        }
+    }
+}
+
+
+
+.invoice {
+    background: $color-gold-light;
+    color: $color-text-gold;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    width: max-content;
+}
+
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: $color-grey;
+    margin-top: -.5rem;
+}
+
+.action {
+    position: relative;
+     & .options {
+         position: absolute;
+         background: $color-bg-white;
+         top: -7.5rem;
+         right: 0;
+         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+         border-radius: 5px;
+         width: 110%;
+         z-index: 100;
+         
+         &::after{
+             content: "";
+             height: 0;
+             width: 0;
+             position: absolute;
+             border-left: 8px solid transparent;
+             border-right: 8px solid transparent;
+             border-top: 8px solid $color-bg-white;
+             right: 5%;
+         }
+         & > * {
+             display: block;
+             padding: .7rem 1rem;
+             width: 100%;
+
+             &:hover{
+                 background: lighten($color-grey, 0);
+             }
+         }
+
+         & > *:not(:last-child){
+             border-bottom: 1px solid $color-grey;
+         }
+
+         & > *:first-child{
+             padding-top: 1rem;
+         }
+    }
+}
+
