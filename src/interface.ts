@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 
-export interface Imatch {
-    url : string
+export interface Icomingsoon {
+    match: { url: string }
 }
 
 export interface IPageLayout {
-    children : ReactNode; 
+    children: ReactNode;
 }

@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $color-bg-white;
+    padding: .6rem 7rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.active {
+    color: $color-dark-blue;
+    position: relative;
+    &::after{
+        content: "";
+        background: $color-dark-blue;
+        position: absolute;
+        bottom: -1.4rem;
+        left: 0;
+        height: 2px;
+        width: 100%;
+    }
+}
+
+.link {
+    margin-right: 1rem;
+    transition: all .2s ease-in;
+}
+
+
+.action {
+    display: flex;
+    &User {
+        align-items: center;
+        border-radius: 5px;
+        background: $color-dark-blue;
+        cursor: pointer;
+        display: flex;
+        padding: .5rem .8rem;
+        & > *:nth-child(2){
+            margin-left: .3rem;
+        }
+    }
+    &Notify{
+        background: $color-dark-blue;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: .5rem .7rem;
+        margin-right: .5rem;
+    }
+}
+
+.nav {
+    flex: .7;
+    display: flex;
+    justify-content: space-between;
+}
