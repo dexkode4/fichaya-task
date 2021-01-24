@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 
 export interface Icomingsoon {
-    match: { url: string }
+    match?: { url: string }
 }
 
 export interface IPageLayout {
@@ -13,7 +13,14 @@ export interface Icustombutton {
     icon?: React.ReactElement,
     clear: boolean,
     fill: boolean,
-    toggleOptions?: any
+    toggleOptions?: any,
+    history?: { push: (D: string) => void },
+    match?: { url: string }
+}
+
+export interface IGenerateInvoice{
+    history?: { push: (D: string) => void }
+    match?: { url: string }
 }
 
 export interface IinvoiceStatus {
@@ -37,5 +44,11 @@ export interface Iformdata {
     company: string,
     email: string,
     phone: string,
-    address: string
+    address: string,
+    issueDate: Date,
+    dueDate: Date,
+    VAT: number | undefined,
+    description: string,
+    amount: number | undefined,
+    totalAmount: number
 }

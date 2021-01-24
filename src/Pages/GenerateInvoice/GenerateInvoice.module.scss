@@ -16,18 +16,25 @@
         padding: 2.5rem 2rem;
         width: 49%;
 
-        & div {
-            margin-bottom: 1rem;
-        }
-
         & .mid{
             display: flex;
             justify-content: space-between;
             width: 100%;
-            & div {
+            & > div {
                 width: 48%;
                 
             }
+        }
+    }
+}
+
+.formInput {
+    margin-bottom: 1rem !important;
+    & > input {
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
     }
 }
@@ -42,4 +49,68 @@
     outline-width: 0;
     padding: .6rem 1rem;
     width: 100%;
+}
+
+.dateInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $color-gold;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 100;
+    margin-top: 1rem;
+    outline-width: 0;
+    padding: .75rem 1rem;
+    margin-bottom: 1rem !important;
+    width: 100%;
+
+    & > input {
+        font-size: 1.1rem;
+        font-family: 'Mukta', sans-serif;
+        font-weight: 200;
+        color: $fichaya-secondary-black ;
+        outline-width: 0;
+        width: 100%;
+        border: none;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+    }
+}
+
+
+.total {
+    background: $color-grey;
+    border-radius: 5px;
+    color: $fichaya-secondary-black;
+    font-size: 1.3rem;
+    font-weight: 100;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+
+.footer{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    & > * {
+        width: 49%;
+    }
+
+    &Action{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > * {
+            width: 48%;
+        }
+    }
 }

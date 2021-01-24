@@ -5,6 +5,8 @@ import PageLayout from '../../Components/PageLayout';
 import { CaretDownIconWithBg } from '../../assets/svg';
 import styles from './Request.module.scss';
 import { InvoiceStatus, Options } from './Request.component';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -84,6 +86,7 @@ IWAYA, ONIKE, YABA.</span>
                 </div>
 
             </div>
+            <ToastContainer/>
         </PageLayout>
     )
 }
