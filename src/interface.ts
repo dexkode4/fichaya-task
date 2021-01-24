@@ -18,7 +18,7 @@ export interface Icustombutton {
     match?: { url: string }
 }
 
-export interface IGenerateInvoice{
+export interface IGenerateInvoice {
     history?: { push: (D: string) => void }
     match?: { url: string }
 }
@@ -50,5 +50,5 @@ export interface Iformdata {
     VAT: number | undefined,
     description: string,
     amount: number | undefined,
-    totalAmount: number
+    status: string
 }

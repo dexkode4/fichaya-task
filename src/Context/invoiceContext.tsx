@@ -29,7 +29,7 @@ export const InvoiceContextProvider = ({ children }: Propstype) => {
         VAT: 0,
         description: "",
         amount: 0,
-        totalAmount: 0,
+        status: "UNPAID"
     })
     const [isFormFilled, setIsFormFilled] = useState(false);
 
@@ -43,8 +43,10 @@ export const InvoiceContextProvider = ({ children }: Propstype) => {
         () => {
             return (((formData.VAT * formData.amount) / 100) + Number(formData.amount))
         },
-        [formData.amount],
+        [formData.amount, formData.VAT],
     );
+
+
 
     const handleFormData = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value, name } = e.target;

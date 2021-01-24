@@ -1,0 +1,111 @@
+@import '../../styles/variables';
+
+.header {
+    margin: 2rem 0 1rem;
+}
+
+.card {
+    background-color: $color-bg-white;
+    border: 1px solid $color-grey;
+    border-radius: 10px;
+    padding: 2rem;
+    padding-bottom: 5rem;
+    width: 100%;
+
+    p {
+        color: $fichaya-black;
+    }
+
+    &Left {
+        & .title{
+            margin: .5rem 0;
+        }
+    }
+
+    &Right{
+        text-align: right;
+    }
+
+    &Header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+       
+    }
+    &MidSection{
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.5rem;
+    }
+
+    &Lower {
+        display: flex;
+        & > div {
+            width: 49%;
+        }
+    }
+
+    &Breakdown{
+        margin-top: 2rem;
+        border-bottom: 1px solid $color-grey;
+      &Item {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        border-top: 1px solid $color-grey;
+      }
+
+      &Total{
+          color: $fichaya-purple !important;
+          font-weight: 700;
+      }
+    }
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & > div {
+        width: 50%;
+    }
+}
+
+.btnGroup{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    width: 100%;
+    & > * {
+        width: 48%;
+    }
+}
+
+.negative{
+    color: $color-red;
+}
+
+.table{
+    margin-top: 4rem;
+    width: 100%; 
+    &Header ,  &Body {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color-grey;
+        font-weight: 300;
+        & > div:last-child{
+            text-align: right;
+        }
+    }
+
+    &Body {
+        padding-bottom: none;
+        border-bottom: none;
+        margin-top: 1rem;
+    }
+}
