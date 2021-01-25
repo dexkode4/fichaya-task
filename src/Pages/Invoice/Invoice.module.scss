@@ -98,7 +98,7 @@
         padding-bottom: 1rem;
         border-bottom: 1px solid $color-grey;
         font-weight: 300;
-        & > div:last-child{
+        & > *:last-child{
             text-align: right;
         }
     }

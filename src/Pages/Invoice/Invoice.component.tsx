@@ -4,6 +4,7 @@ import styles from './Invoice.module.scss';
 import { LogoIcon } from '../../assets/svg';
 import { InvoiceContext } from '../../Context/invoiceContext';
 
+
 export const InvoiceCard = () => {
     const state = useContext(InvoiceContext);
     return (
@@ -48,10 +49,10 @@ export const InvoiceCard = () => {
                     <div>AMOUNT</div>
                 </header>
                 <div className={styles.tableBody}>
-                    <div>{state?.formData.description}</div>
-                    <div>1</div>
-                    <div>{`NGN ${state?.formData.amount?.toLocaleString()}`}</div>
-                    <div>{`NGN ${state?.formData.amount?.toLocaleString()}`}</div>
+                    <p>{state?.formData.description}</p>
+                    <p>1</p>
+                    <p>{`NGN ${state?.formData.amount?.toLocaleString()}`}</p>
+                    <p>{`NGN ${state?.formData.amount?.toLocaleString()}`}</p>
                 </div>
             </div>
 
