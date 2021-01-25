@@ -6,8 +6,6 @@ import { InvoiceContext } from '../../Context/invoiceContext';
 
 export const InvoiceCard = () => {
     const state = useContext(InvoiceContext);
-    console.log(moment(state?.formData.issueDate).format('LL'));
-
     return (
         <div className={styles.card}>
             <div className={styles.cardHeader}>
@@ -39,7 +37,7 @@ export const InvoiceCard = () => {
                     <p>{`${moment(state?.formData.dueDate).format('LL')}`}</p>
                     <br />
                     <header className={styles.title}>AMOUNT</header>
-                    <p>{`NGN ${state?.calcTotalAmount()}`}</p>
+                    <p>{`NGN ${state?.calcTotalAmount().toLocaleString()}`}</p>
                 </div>
             </div>
             <div className={styles.table}>
@@ -66,11 +64,11 @@ export const InvoiceCard = () => {
                     </div>
                     <div className={styles.cardBreakdownItem}>
                         <header className={styles.title}>VAT ({state?.formData.VAT}%) </header>
-                        <p>{`NGN ${state?.formData.amount?.toLocaleString()}`}</p>
+                        <p>{`NGN ${state?.calcVAT().toLocaleString()}`}</p>
                     </div>
                     <div className={styles.cardBreakdownItem}>
                         <header className={styles.title}>TOTAL</header>
-                        <p className={styles.cardBreakdownTotal}>{`NGN ${state?.formData.amount?.toLocaleString()}`}</p>
+                        <p className={styles.cardBreakdownTotal}>{`NGN ${state?.calcTotalAmount().toLocaleString()}`}</p>
                     </div>
                 </div>
 

@@ -7,7 +7,8 @@ interface ContextValues {
     handleIssueDate: (date: Date) => void,
     handleDueDate: (date: Date) => void,
     isFormFilled: boolean,
-    calcTotalAmount: () => number
+    calcTotalAmount: () => number,
+    calcVAT: () => number,
 }
 
 export const InvoiceContext = createContext<ContextValues | null>(null);
@@ -45,6 +46,12 @@ export const InvoiceContextProvider = ({ children }: Propstype) => {
         },
         [formData.amount, formData.VAT],
     );
+    const calcVAT = useCallback(
+        () => {
+            return (((formData.VAT * formData.amount) / 100) )
+        },
+        [formData.amount, formData.VAT],
+    );
 
 
 
@@ -66,7 +73,8 @@ export const InvoiceContextProvider = ({ children }: Propstype) => {
         handleIssueDate,
         handleDueDate,
         isFormFilled,
-        calcTotalAmount
+        calcTotalAmount,
+        calcVAT
     }
 
 
